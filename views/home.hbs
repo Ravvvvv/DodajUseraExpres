@@ -1,9 +1,42 @@
-<h1>
-    <ul>
-        {{#each name}}
-        <li>{{this}}</li>
-        {{/each}}
-    </ul>
-</h1>
+<table cellspacing="0" cellpadding="0" border="1" style="width: 100%;">
+    {{! tutaj dajemy caly zapis zeby rzady i wiersze zostaly wyswietlone jako calosc}}
 
-<h1>dzialam</h1>
+    {{!-- to co bedzie na gorze /// w rzedach --}}
+    <thead>
+        <tr>
+            <th>Imię</th>
+            <th>Username</th>
+            <th>Adres</th>
+            <th>Nr</th>
+            <th>Miasto</th>
+            <th>Kod pocztowy</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{username}}</td>
+            <td>ul.{{address.street}}</td>
+            <td>nr.{{address.suite}}</td>
+            <td>{{address.city}}</td>
+            <td>{{address.zipcode}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{!-- <table>
+    <tr>
+        <th>Nagłówek kolumny 1</th>
+        <th>Nagłówek kolumny 2</th>
+    </tr>
+    <tr>
+        <td>Kolumna 1, wiersz 1</td>
+        <td>Kolumna 2, wiersz 1</td>
+    </tr>
+    <tr>
+        <td>Kolumna 1, wiersz 2</td>
+        <td>Kolumna 2, wiersz 2</td>
+    </tr>
+</table>--}}
