@@ -21,6 +21,15 @@
             <td>nr.{{address.suite}}</td>
             <td>{{address.city}}</td>
             <td>{{address.zipcode}}</td>
+            <td>
+                {{! musimy dac #if website jest i to w a href plus http:// aby wyswietlilo storne
+                target _blank daje nam mozliwosc otworzenie nowej storny }}
+                {{#if website}}
+                <a href="http://{{website}}" target="_blank">Link</a>
+                {{else}}
+                nie ma storny
+                {{/if}}
+            </td>
         </tr>
         {{/each}}
     </tbody>
